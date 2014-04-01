@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript">
+$(function () {
+        $('#container').highcharts({
+            title: {
+                text: 'Deficit státních institucí',
+                x: -20 //center
+            },
+            subtitle: {
+                text: 'v procentech HDP',
+                x: -20
+            },
+            xAxis: {
+                categories: ['1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013']
+            },
+            yAxis: {
+                title: {
+                    text: 'procenta HDP'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+                valueSuffix: ' %'
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'bottom',
+                verticalAlign: 'bottom',
+                borderWidth: 0
+            },
+            series: [{
+                name: 'deficit',
+                data: [3.32, 3.8, 5.01, 3.71, 3.72, 5.74, 6.67, 6.62, 2.96, 3.58, 2.63, 0.74, 2.23, 5.81, 4.73, 3.2, 4.2, 1.44]
+            },
+            {
+                type: 'line',
+                color:'red',
+                name: '3 % hranice potřebná pro naplnění Maastrichtských kritérií',
+                data: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+
+        }]
+        });
+    });
+    
+
+		</script>
+	</head>
+	<body>
+<script src="./js/highcharts.js"></script>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+	</body>
+</html>
