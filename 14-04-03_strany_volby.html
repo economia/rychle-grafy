@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript">
+$(function () {
+        $('#container').highcharts({
+            title: {
+                text: 'Výdaje politických stran na volby',
+                x: -20 //center
+            },
+            subtitle: {
+                text: 'dle výročních zpráv',
+                x: -20
+            },
+            xAxis: {
+                categories: ['2007', '2008', '2009', '2010', '2011', '2012', '2013']
+            },
+            yAxis: {
+                title: {
+                    text: 'Kč'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+                valueSuffix: ' Kč'
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle',
+                borderWidth: 0
+            },
+            series: [{
+                name: 'ČSSD',
+                data: [1349950, 97498897, 165170631, 270184573, 1930228, 95711821, 87345138],
+                color: 'orange'
+            }, {
+                name: 'KDU-ČSL',
+                data: [557946, 35458804, 41003998, 28051542, 155507, 20524855, 39650105],
+                color: 'black'
+            }, {
+                name: 'ODS',
+                data: [2407000, 320671000, 303570000, 541566000, 1076000, 129642000, 98308000],
+                color: 'blue'
+            }, {
+                name: 'ANO 2011',
+                data: [null, null, null, null ,null , 12134329, 119080399],
+                color: 'violet'
+            }, {
+                name: 'TOP 09',
+                data: [null, null, 32307383, 107165870, 1696508, 53605101, 70303419],
+                color: 'navy'
+            }, {
+                name: 'KSČM',
+                data: [3543927, 33019750, 58288331, 31039030, 1271621, 19095182, 13110033],
+                color: 'red'
+             }, {
+                name: 'Úsvit',
+                data: [null, null, null, null, null, null, 11790410],
+                color: 'lightgreen'
+            }]
+        });
+    });
+    
+
+		</script>
+	</head>
+	<body>
+<script type="text/javascript" src="http://service.ihned.cz/js/highcharts/highcharts.js"></script>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+	</body>
+</html>

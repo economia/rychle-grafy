@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript">
+$(function () {
+        $('#container').highcharts({
+            title: {
+                text: 'Ceny plynu Pražské plynárenské',
+                x: -20 //center
+            },
+            subtitle: {
+                text: 'bez DPH, dle ročního odběru',
+                x: -20
+            },
+            xAxis: {
+                categories: ['2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013']
+            },
+            yAxis: {
+                title: {
+                    text: 'Kč za MWh'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+                valueSuffix: ' Kč/MWh'
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle',
+                borderWidth: 0
+            },
+            series: [{
+                name: '63 - 630 MWh/rok',
+                data: [870.46, 642.1, 742.61, 951.43, 747.48, 754.05, 971.59, 988.17],
+                color: '#a6cee3'
+            }, {
+                name: '55 - 63 MWh/rok',
+                data: [955.43, 718.39, 838.95, 1024.51, 815.56, 814.45, 1029.82, 1045.01],
+                color: '#b2df8a'
+            }, {
+                name: '50 - 55 MWh/rok',
+                data: [955.43, 718.39, 838.95, 1024.51, 815.56, 817.95, 1033.71, 1049.5],
+                color: '#1f78b4'
+            }, {
+                name: '45 - 50 MWh/rok',
+                data: [955.43, 718.39, 838.95, 1024.51, 815.56, 818.65, 1034.25, 1050.98],
+                color: '#33a02c'
+            }, {
+                name: '40 - 45 MWh/rok',
+                data: [955.43, 718.39, 838.95, 1024.51, 815.56, 821.31, 1036.73, 1053.27],
+                color: '#fdbf6f'
+            }, {
+                name: '35 - 40 MWh/rok',
+                data: [955.43, 718.39, 838.95, 1024.51, 815.56, 822.14, 1037.53, 1054.26],
+                color: '#fb9a99'
+            }, {
+                name: '30 - 35 MWh/rok',
+                data: [955.43, 718.39, 838.95, 1024.51, 815.56, 826.16, 1041.66, 1056.83],
+                color: 'black'
+            }, {
+                name: '25 - 30 MWh/rok',
+                data: [962.89, 724.67, 854.55, 1024.51, 815.56, 830.44, 1045.88, 1060.42],
+                color: '#ff7f00'
+            }, {
+                name: '20 - 25 MWh/rok',
+                data: [962.89, 724.67, 854.55, 1024.51, 815.56, 833.73, 1050.26, 1065.17],
+                color: '#cab2d6'
+            }, {
+                name: '15 - 20 MWh/rok',
+                data: [962.89, 724.67, 854.55, 1024.51, 815.56, 837.78, 1052.92, 1067.97],
+                color: '#ffff99'
+            }, {
+                name: '7.56 - 15 MWh/rok',
+                data: [962.89, 724.67, 854.55, 1024.51, 815.56, 841.61, 1058.21, 1072.63],
+                color: '#6a3d9a'
+            }, {
+                name: '1.89 - 7.56 MWh/rok',
+                data: [1021.62, 777.32, 889.27, 1131.22, 903.8, 913.63, 1365.83, 1380.26],
+                color: '#b15928'
+            }, {
+                name: 'pod 1.89 MWh/rok',
+                data: [1267.7, 983.52, 1175.01, 1498.36, 1094.07, 1094.95, 1801.67, 1811.75],
+                color: '#e31a1c'
+            }]
+        });
+    });
+    
+
+		</script>
+	</head>
+	<body>
+<script type="text/javascript" src="http://service.ihned.cz/js/highcharts/highcharts.js"></script>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+	</body>
+</html>
