@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript">
+$(function () {
+        $('#container').highcharts({
+            chart: {
+                renderTo: 'container',
+                type: 'bar',
+                borderWidth: 0
+            },
+            title: {
+                text: 'HDP zemí EU',
+                x: -20 //center
+            },
+            subtitle: {
+                text: 'seřazené dle hodnot v roce 2013',
+                x: -20
+            },
+            xAxis: {
+                categories: ['Lucembursko', 'Dánsko', 'Švédsko', 'Rakousko', 'Nizozemsko', 'Finsko', 'Irsko', 'Belgie', 'Německo', 'Francie', 'Británie', 'Itálie', 'Španělsko', 'Kypr', 'Malta', 'Slovinsko', 'Řecko', 'Portugalsko', 'Estonsko', 'Česká republika', 'Slovensko', 'Litva', 'Lotyšsko', 'Chorvatsko', 'Maďarsko', 'Polsko', 'Rumunsko', 'Bulharsko']
+            },
+            yAxis: {
+                title: {
+                    text: 'HDP v dolarech na osobu'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+                valueSuffix: ' $'
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'bottom',
+                verticalAlign: 'bottom',
+                borderWidth: 0
+            },
+            series: [{
+                name: '2013',
+                color: 'blue',
+                data: [110423.839, 59190.745, 57909.292, 48956.923, 47633.622, 47129.297, 45620.711, 45383.999, 44999.496, 42999.968, 39567.41, 34714.703, 29150.345, 24761.306, 22872.48, 22756.016, 21857.28, 20727.588, 19031.941, 18857.914, 17706.196, 16003.195, 15205.424, 13561.708, 13404.834, 13394.339, 8910.469, 7328.488]
+            },
+            {
+                name: '2012',
+                color: 'lightgray',
+                data: [103806.616, 56475.85, 54829.105, 46620.235, 45988.604, 45567.519, 45961.959, 43553.781, 42569.471, 41223.213, 38999.208, 33915.461, 28294.112, 26376.762, 21226.731, 22089.392, 22346.584, 20019.902, 17295.228, 18699.467, 16912.299, 14170.839, 13899.26, 13118.942, 12543.959, 12708.962, 7929.139, 7048.62]
+
+        }]
+        });
+    });
+    
+
+		</script>
+	</head>
+	<body>
+<script type="text/javascript" src="http://service.ihned.cz/js/highcharts/highcharts.js"></script>
+
+<div id="container" style="min-width: 310px; height: 800px; margin: 0 auto"></div>
+
+	</body>
+</html>

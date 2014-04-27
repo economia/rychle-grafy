@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript">
+$(function () {
+        $('#container').highcharts({
+            title: {
+                text: 'Scénář české energetiky',
+                x: -20 //center
+            },
+            subtitle: {
+                text: 'pokud se do roku 2040 nepostaví žádná významná elektrárna',
+                x: -20
+            },
+            credits: { 
+               position: {
+                  align: 'left',
+                  x: 40,
+                  y: 0
+               },
+               text: 'Zdroj: Ekonom, ČEPS, OTE',
+               href: '#'
+            },
+            xAxis: {
+                categories: ['2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032', '2033', '2034', '2035', '2036', '2037', '2038', '2039', '2040']
+            },
+            yAxis: {
+                title: {
+                    text: 'výkon v megawattech'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+                valueSuffix: ' MWh',
+                formatter: function() {
+                    return this.y + ' MW <br>' + this.point.options.text
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'bottom',
+                verticalAlign: 'bottom',
+                borderWidth: 0
+            },
+            series: [{
+                name: 'Výkon českého energetického průmyslu',
+                data: [{y: 11900, text: ''},
+                        {y: 12980, text: 'nárůst díky spuštění nového uhelného bloku v Ledvicích a paroplynu v Počeradech'},
+                        {y: 13110, text: 'mírné zvýšení po dokončení rekonstrukce tří bloků uhelné elektrárny Prunéřov'},
+                        {y: 13110, text: ''},
+                        {y: 12870, text: ''},
+                        {y: 12670, text: ''},
+                        {y: 12670, text: ''},
+                        {y: 11530, text: 'odstavení části dožitých uhelných bloků (například Mělník III)'},
+                        {y: 11420, text: ''},
+                        {y: 11420, text: ''},
+                        {y: 11040, text: ''},
+                        {y: 11040, text: ''},
+                        {y: 9616, text: 'odstavení prvního bloku jaderné elektrárny Dukovany; závislost na dovozu elektřiny'},
+                        {y: 8706, text: ''},
+                        {y: 7686, text: 'odstavení posledního ze čtyř bloků jaderné elektrárny Dukovany'},
+                        {y: 7686, text: ''},
+                        {y: 7286, text: ''},
+                        {y: 7286, text: ''},
+                        {y: 7286, text: ''},
+                        {y: 6486, text: 'odstavení uhelné elektrárny Tušimice kvůli chybějícímu uhlí'},
+                        {y: 5516, text: 'odstavení uhelné elektrárny Prunéřov II kvůli chybějícímu uhlí'},
+                        {y: 5516, text: ''},
+                        {y: 5516, text: ''},
+                        {y: 5516, text: ''},
+                        {y: 5516, text: ''},
+                        {y: 5516, text: ''},
+                        {y: 5516, text: ''}]
+        }]
+        });
+    });
+    
+
+		</script>
+	</head>
+	<body>
+<script type="text/javascript" src="http://service.ihned.cz/js/highcharts/highcharts.js"></script>
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+	</body>
+</html>

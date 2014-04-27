@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript">
+$(function () {
+        $('#container').highcharts({
+            title: {
+                text: 'Volební účast',
+                x: -20 //center
+            },
+            plotOptions: {
+                series: {
+                    connectNulls: true,
+                    events: {
+                        mouseOver: function() {
+                            if (this.name == "Česká republika ") {
+                                this.graph.attr('stroke', 'rgba(222,45,38,1)');
+                            }  else if (this.name == "Průměr EU") {
+                                this.graph.attr('stroke', 'rgba(49,130,189,1)');
+                            }   else {                 
+                                this.graph.attr('stroke', 'rgba(254,178,76,1)');
+                        }
+                    },
+                        mouseOut: function() {
+                             if (this.name == "Česká republika ") {
+                                this.graph.attr('stroke', 'rgba(252,146,114,1)');
+                            }  else if (this.name == "Průměr EU") {
+                                this.graph.attr('stroke', 'rgba(158,202,225,1)');
+                            }   else {                 
+                                this.graph.attr('stroke', 'rgba(189,189,189,1)');
+                        }
+                        },
+                    }
+            }},
+            subtitle: {
+                text: 've volbách do evropského parlamentu',
+                x: -20
+            },
+            xAxis: {
+                categories: ['1994', '1995', '1996', '1997', '1998', '1999', '2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013']
+            },
+            yAxis: {
+                title: {
+                    text: 'volební účast v procentech'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+                valueSuffix: ' %'
+            },
+            legend: {
+                enabled: false,
+                layout: 'horizontal',
+                align: 'bottom',
+                verticalAlign: 'bottom',
+                borderWidth: 0
+            },
+            series: [{
+                name: 'Průměr EU',
+                zIndex: 100,
+                lineWidth: 3,
+                color: 'rgba(158,202,225,1)',
+                data:[56.67, null, null, null, null, 49.51, null, null, null, null, 45.47, null, null, null, null, 43, null, null, null, null]
+            },
+            {
+                name: 'Belgie ', 
+                color: 'rgba(189,189,189,1)',
+                data:[90.66, null, null, null, null, 91.05, null, null, null, null, 90.81, null, null, null, null, 90.39, null, null, null, null]
+             },
+            {
+                name: 'Bulharsko ', 
+                color: 'rgba(189,189,189,1)',
+                data:[null, null, null, null, null, null, null, null, null, null, null, null, null, 29.22, null, 38.92, null, null, null, null]
+             },
+            {
+                name: 'Česká republika ',
+                lineWidth: 3,
+                color: 'rgba(252,146,114,1)',
+                zIndex: 100,
+                data:[null, null, null, null, null, null, null, null, null, null, 28.3, null, null, null, null, 28.2, null, null, null, null]
+             },
+            {
+                name: 'Dánsko ', 
+                color: 'rgba(189,189,189,1)',
+                data:[52.92, null, null, null, null, 50.39, null, null, null, null, 47.89, null, null, null, null, 59.54, null, null, null, null]
+             },
+            {
+                name: 'Německo ', 
+                color: 'rgba(189,189,189,1)',
+                data:[60.02, null, null, null, null, 45.21, null, null, null, null, 43, null, null, null, null, 43.3, null, null, null, null]
+             },
+            {
+                name: 'Estonsko ', 
+                color: 'rgba(189,189,189,1)',
+                data:[null, null, null, null, null, null, null, null, null, null, 26.83, null, null, null, null, 43.9, null, null, null, null]
+             },
+            {
+                name: 'Irsko ', 
+                color: 'rgba(189,189,189,1)',
+                data:[43.98, null, null, null, null, 50.21, null, null, null, null, 58.58, null, null, null, null, 57.57, null, null, null, null]
+             },
+            {
+                name: 'Řecko ', 
+                color: 'rgba(189,189,189,1)',
+                data:[73.18, null, null, null, null, 71.49, null, null, null, null, 63.22, null, null, null, null, 52.63, null, null, null, null]
+             },
+            {
+                name: 'Španělsko ', 
+                color: 'rgba(189,189,189,1)',
+                data:[59.14, null, null, null, null, 63.05, null, null, null, null, 45.14, null, null, null, null, 44.9, null, null, null, null]
+             },
+            {
+                name: 'Francie ', 
+                color: 'rgba(189,189,189,1)',
+                data:[52.76, null, null, null, null, 46.76, null, null, null, null, 42.76, null, null, null, null, 40.63, null, null, null, null]
+             },
+            {
+                name: 'Chorvatsko ', 
+                color: 'rgba(189,189,189,1)',
+                data:[null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, 20.84]
+             },
+            {
+                name: 'Itálie ', 
+                color: 'rgba(189,189,189,1)',
+                data:[73.6, null, null, null, null, 69.76, null, null, null, null, 71.72, null, null, null, null, 65.05, null, null, null, null]
+             },
+            {
+                name: 'Kypr ', 
+                color: 'rgba(189,189,189,1)',
+                data:[null, null, null, null, null, null, null, null, null, null, 72.5, null, null, null, null, 59.4, null, null, null, null]
+             },
+            {
+                name: 'Lotyšsko ', 
+                color: 'rgba(189,189,189,1)',
+                data:[null, null, null, null, null, null, null, null, null, null, 41.34, null, null, null, null, 53.7, null, null, null, null]
+             },
+            {
+                name: 'Litva ', 
+                color: 'rgba(189,189,189,1)',
+                data:[null, null, null, null, null, null, null, null, null, null, 48.38, null, null, null, null, 20.98, null, null, null, null]
+             },
+            {
+                name: 'Lucembursko ', 
+                color: 'rgba(189,189,189,1)',
+                data:[88.55, null, null, null, null, 87.27, null, null, null, null, 91.35, null, null, null, null, 90.76, null, null, null, null]
+             },
+            {
+                name: 'Maďarsko ', 
+                color: 'rgba(189,189,189,1)',
+                data:[null, null, null, null, null, null, null, null, null, null, 38.5, null, null, null, null, 36.31, null, null, null, null]
+             },
+            {
+                name: 'Malta ', 
+                color: 'rgba(189,189,189,1)',
+                data:[null, null, null, null, null, null, null, null, null, null, 82.39, null, null, null, null, 78.79, null, null, null, null]
+             },
+            {
+                name: 'Nizozemí ', 
+                color: 'rgba(189,189,189,1)',
+                data:[35.69, null, null, null, null, 30.02, null, null, null, null, 39.26, null, null, null, null, 36.75, null, null, null, null]
+             },
+            {
+                name: 'Rakousko ', 
+                color: 'rgba(189,189,189,1)',
+                data:[null, null, 67.73, null, null, 49.01, null, null, null, null, 42.43, null, null, null, null, 45.97, null, null, null, null]
+             },
+            {
+                name: 'Polsko ', 
+                color: 'rgba(189,189,189,1)',
+                data:[null, null, null, null, null, null, null, null, null, null, 20.87, null, null, null, null, 24.53, null, null, null, null]
+             },
+            {
+                name: 'Portugalsko ', 
+                color: 'rgba(189,189,189,1)',
+                data:[null, null, null, null, null, 39.93, null, null, null, null, 38.6, null, null, null, null, 36.78, null, null, null, null]
+             },
+            {
+                name: 'Rumunsko ', 
+                color: 'rgba(189,189,189,1)',
+                data:[null, null, null, null, null, null, null, null, null, null, null, null, null, 29.47, null, 27.67, null, null, null, null]
+             },
+            {
+                name: 'Slovinsko ', 
+                color: 'rgba(189,189,189,1)',
+                data:[null, null, null, null, null, null, null, null, null, null, 28.35, null, null, null, null, 28.33, null, null, null, null]
+             },
+            {
+                name: 'Slovensko ', 
+                color: 'rgba(189,189,189,1)',
+                data:[null, null, null, null, null, null, null, null, null, null, 16.97, null, null, null, null, 19.64, null, null, null, null]
+             },
+            {
+                name: 'Finsko ', 
+                color: 'rgba(189,189,189,1)',
+                data:[null, null, 57.6, null, null, 30.14, null, null, null, null, 39.43, null, null, null, null, 40.48, null, null, null, null]
+             },
+            {
+                name: 'Švédsko ', 
+                color: 'rgba(189,189,189,1)',
+                data:[null, 41.63, null, null, null, 38.84, null, null, null, null, 37.85, null, null, null, null, 45.53, null, null, null, null]
+             },
+            {
+                name: 'Spojené království', 
+                color: 'rgba(189,189,189,1)',
+                data:[36.43, null, null, null, null, 24, null, null, null, null, 38.52, null, null, null, null, 34.7, null, null, null, null]
+        }]
+        });
+    });
+    
+
+		</script>
+	</head>
+	<body>
+<script type="text/javascript" src="http://service.ihned.cz/js/highcharts/highcharts.js"></script>
+
+<div id="container" style="min-width: 310px; height: 650px; margin: 0 auto"></div>
+
+	</body>
+</html>
