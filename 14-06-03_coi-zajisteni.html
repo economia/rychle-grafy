@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<script type="text/javascript" src="http://ihned.cz/js/jquery.js"></script>
+		<script type="text/javascript">
+$(function () {
+        $('#container').highcharts({
+            chart: {
+                type: 'area'
+            },
+            title: {
+                text: 'Nejvíce zabavených padělků je značky Adidas, Bateria, Louis Vuitton',
+                align: "left"
+            },
+            subtitle: {
+                text: 'Jednorázově se také našly výrobky Sneaker a audio/video nosiče',
+                align: "left"
+            },
+            plotOptions: {
+                area: {
+                    stacking: true
+                }
+            },
+            xAxis: {
+                categories: ["leden 2012", "", "březen 2012", "", "květen 2012", "", "červenec 2012", "", "září 2012", "", "listopad 2012", "", "leden 2013", "", "březen 2013", "", "květen 2013", "", "červenec 2013", "", "září 2013", "", "listopad 2013", "", "leden 2014", "", "březen 2014"]
+            },
+            yAxis: {
+                title: {
+                    text: 'počet zabavených padělků'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+                valueSuffix: ' %'
+            },
+            legend: {
+                enabled: true,
+                layout: 'horizontal',
+                align: 'bottom',
+                verticalAlign: 'bottom',
+                borderWidth: 0
+            },
+            series: [
+            {
+                name: "Adidas",
+                color: "#a6cee3",
+                data: [12, 110, 36, 106, 197, 5, 19, 69, 862, 1053, 597, 1, 7, 7, 42, 237, 166, 36, 15, 166, 35, 80, 116, 42, 5, 72, 5]
+            },
+            {
+                name: "Bateria",
+                color: "#1f78b4",
+                data: [0, 1744, 0, 56, 15, 0, 220, 0, 107, 0, 0, 444, 0, 0, 816, 0, 0, 152, 0, 48, 60, 0, 0, 0, 0, 0, 183]
+            },
+            {
+                name: "Luis Vuitton",
+                color: "#b2df8a",
+                data: [15, 96, 16, 80, 90, 17, 108, 56, 623, 1418, 277, 19, 144, 3, 179, 62, 48, 45, 26, 42, 44, 8, 82, 141, 13, 75, 17]
+            },
+            {
+                name: "BURRBERY´S",
+                color: "#33a02c",
+                data: [101, 39, 84, 142, 82, 325, 260, 68, 165, 237, 169, 25, 448, 31, 101, 76, 147, 111, 39, 50, 54, 63, 176, 84, 287, 80, 216]
+            },
+            {
+                name: "Puma",
+                color: "#fb9a99",
+                data: [15, 73, 9, 19, 109, 2, 12, 30, 241, 1209, 274, 1, 1, 4, 6, 163, 26, 20, 7, 85, 24, 56, 34, 20, 3, 20, 7]
+            },
+            {
+                name: "Lacoste",
+                color: "#e31a1c",
+                data: [8, 112, 13, 54, 99, 3, 9, 24, 237, 624, 373, 0, 8, 2, 5, 136, 71, 39, 7, 25, 11, 29, 36, 24, 0, 36, 6]
+            },
+            {
+                name: "Sneaker",
+                color: "#fdbf6f",
+                data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13680, 0]
+            },
+            {
+                name: "audio, video",
+                color: "#ff7f00",
+                data: [0, 167, 22, 2934, 0, 0, 26, 0, 12168, 93, 0, 0, 0, 16, 0, 0, 3645, 199, 308, 2, 97, 0, 858, 97, 0, 0, 0]
+            },
+            {
+                name: "PokémonWizards",
+                color: "#cab2d6",
+                data: [0, 0, 0, 78, 0, 0, 313, 0, 12, 7, 117, 0, 8, 616, 0, 314, 106, 0, 0, 0, 636, 0, 97, 0, 0, 102, 11]
+            },
+            {
+                name: "Armani",
+                color: "#6a3d9a",
+                data: [5, 28, 9, 51, 109, 4, 20, 16, 142, 370, 92, 0, 72, 6, 11, 73, 39, 89, 8, 86, 65, 28, 49, 19, 0, 42, 18]
+            },
+            {
+                name: "NIKE",
+                color: "#ffff99",
+                data: [12, 53, 7, 18, 13, 1, 15, 10, 237, 570, 231, 0, 1, 1, 11, 57, 15, 4, 1, 25, 10, 89, 30, 21, 5, 12, 0]
+            },
+            {
+                name: "HELLO KITTY",
+                color: "#b15928",
+                data: [0, 28, 12, 98, 119, 79, 66, 15, 197, 50, 135, 1, 17, 65, 55, 148, 93, 10, 0, 61, 9, 87, 26, 5, 4, 14, 27]
+            },
+            {
+                name: "Neoznačené",
+                color: "#888888",
+                data: [126, 59, 375, 489, 781, 260, 128, 239, 816, 523, 1331, 49, 507, 21, 7, 9, 37, 0, 1, 14, 0, 8, 2, 0, 4, 0, 0]
+            },
+            {
+                name: "Ostatni",
+                color: "#333333",
+                data: [247, 271, 251, 377, 992, 727, 481, 556, 1733, 2366, 2543, 761, 432, 753, 740, 1336, 1767, 807, 305, 569, 914, 1048, 2156, 556, 174, 265, 701]
+            },
+
+            ]
+        });
+    });
+
+
+		</script>
+	</head>
+	<body>
+<script type="text/javascript" src="http://service.ihned.cz/js/highcharts/highcharts.js"></script>
+
+<div id="container" style="min-width: 310px; height: 650px; margin: 0 auto"></div>
+
+	</body>
+</html>
