@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<script type="text/javascript" src="http://ihned.cz/js/jquery.js"></script>
+        <style>
+        body {margin: 0px;}
+        </style>
+		<script type="text/javascript">
+$(function () {
+        $('#container').highcharts({
+            chart: {
+                type: 'column',
+                height: 300
+            },
+            title: {
+                text: 'Tržby CME zaznamenávají propad každé třetí čtvrtletí',
+                align: "left"
+            },
+            xAxis: {
+                categories: ["Q1 2012", "Q2", "Q3", "Q4", "Q1 2013", "Q2", "Q3", "Q4", "Q1 2014"]
+            },
+            yAxis: {
+                title: {
+                    text: 'Tržby v milionech USD'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+                formatter: function() {
+                    return "Tržby CME v " + this.key + ": " + this.y + " 000 000 USD";
+                }
+            },
+            legend: {
+                enabled: false,
+            },
+            series: [
+                {
+                    name: "Tržby v milionech USD",
+                    color: "#a6cee3",
+
+                    data: [
+                        {y: 59, name: "1. čtvrtletí 2012"},
+                        {y: 77, name: "2. čtvrtletí 2012"},
+                        {color: "#D73E3A", y: 52, name: "3. čtvrtletí 2012"},
+                        {y: 91, name: "4. čtvrtletí 2012"},
+                        {y: 32, name: "1. čtvrtletí 2013"},
+                        {y: 46, name: "2. čtvrtletí 2013"},
+                        {color: "#D73E3A", y: 39, name: "3. čtvrtletí 2013"},
+                        {y: 70,  name: "4. čtvrtletí 2013"},
+                        {y: 39, name: "1. čtvrtletí 2014"}]
+                },
+            ]
+        });
+    });
+
+
+		</script>
+	</head>
+	<body>
+<script type="text/javascript" src="http://service.ihned.cz/js/highcharts/highcharts.js"></script>
+
+<div id="container"></div>
+
+	</body>
+</html>
